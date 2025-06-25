@@ -42,6 +42,7 @@ const VolunteerLookup = () => {
   return (
     <Box maxW="md" mx="auto" mt={10} p={5} borderWidth={1} borderRadius="lg">
       <VStack spacing={4} align="stretch">
+        <Heading size="md">Check Your Assigned Service</Heading> 
         <Input
           placeholder="Enter WhatsApp Number"
           value={phone}
