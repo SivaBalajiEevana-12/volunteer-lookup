@@ -26,7 +26,7 @@ const VolunteerLookup = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:3300/user/${phone}`);
+      const res = await fetch(`https://vrc-server-production.up.railway.app/user/${phone}`);
       const data = await res.json();
       if (res.ok) {
         setVolunteer(data);

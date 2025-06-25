@@ -27,7 +27,7 @@ const PhoneAttendanceForm = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:3300/attendence/${phone}`);
+      const res = await fetch(`https://vrc-server-production.up.railway.app/attendence/${phone}`);
       const data = await res.json();
       if (res.ok) {
         setVolunteer(data);
@@ -44,7 +44,7 @@ const PhoneAttendanceForm = () => {
     if (!volunteer?._id) return;
 
     try {
-      const res = await fetch("http://localhost:3300/manual-attendance", {
+      const res = await fetch("https://vrc-server-production.up.railway.app/manual-attendance", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -77,7 +77,7 @@ const PhoneAttendanceForm = () => {
         {isRegister ? (
           <>
             ❌ Volunteer not found. Please{" "}
-            <Link href="https://yourdomain.com/register" color="teal.500" isExternal>
+            <Link href="" color="teal.500" isExternal>
               register here
             </Link>
             .
