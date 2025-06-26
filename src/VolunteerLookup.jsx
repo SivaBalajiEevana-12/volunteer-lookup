@@ -11,6 +11,7 @@ import {
   Heading,
   Badge,
   Divider,
+  Link,
 } from "@chakra-ui/react";
 
 const VolunteerLookup = () => {
@@ -97,15 +98,17 @@ const VolunteerLookup = () => {
             </Text>
             <Text>
               <b>Phone:</b>{" "}
-              <Badge
-                colorScheme="blue"
-                fontSize="1em"
-                as="a"
+              <Link
                 href={`tel:${manager.phone}`}
-                _hover={{ cursor: 'pointer', textDecoration: 'underline' }}
+                color="blue.500"
+                fontWeight="bold"
+                _hover={{ textDecoration: "underline" }}
               >
                 {manager.phone}
-              </Badge>
+              </Link>
+            </Text>
+            <Text fontSize="sm" color="gray.600" mt={1}>
+              📞 <Link href={`tel:${manager.phone}`}>Click here to call coordinator</Link>
             </Text>
           </Box>
         )}
