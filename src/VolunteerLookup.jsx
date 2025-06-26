@@ -11,7 +11,6 @@ import {
   Heading,
   Badge,
   Divider,
-  Highlight,
 } from "@chakra-ui/react";
 
 const VolunteerLookup = () => {
@@ -71,7 +70,6 @@ const VolunteerLookup = () => {
             <Text><b>Phone:</b> {volunteer.whatsappNumber}</Text>
             {/* <Text><b>College/Company:</b> {volunteer.collegeCompany}</Text>
             <Text><b>Age:</b> {volunteer.age}</Text>
-            <Text><b>Gender:</b> {volunteer.gender}</Text>
             <Text><b>Locality:</b> {volunteer.currentLocality}</Text> */}
             <Text>
               <b>Service Type:</b>{" "}
@@ -80,16 +78,16 @@ const VolunteerLookup = () => {
               </Badge>
             </Text>
             <Divider my={2} />
-            {/* <Text fontSize="sm" color="gray.500">
+            <Text fontSize="sm" color="gray.500">
               Submitted At: {new Date(volunteer.submittedAt).toLocaleString()}
-            </Text> */}
+            </Text>
           </Box>
         )}
 
         {manager && (
           <Box borderWidth={1} borderRadius="xl" p={4} shadow="md" bg="gray.50">
             <Heading size="sm" color="gray.700" mb={2}>
-             Your Service Coordinator
+              Your Service Coordinator
             </Heading>
             <Text>
               <b>Name:</b>{" "}
@@ -99,21 +97,16 @@ const VolunteerLookup = () => {
             </Text>
             <Text>
               <b>Phone:</b>{" "}
-              <Badge colorScheme="blue" fontSize="1em">
+              <Badge
+                colorScheme="blue"
+                fontSize="1em"
+                as="a"
+                href={`tel:${manager.phone}`}
+                _hover={{ cursor: 'pointer', textDecoration: 'underline' }}
+              >
                 {manager.phone}
               </Badge>
             </Text>
-            {/* <Text>
-              <b>Service Type:</b>{" "}
-              <Badge colorScheme="purple" fontSize="1em">
-                {manager.serviceType || "N/A"}
-              </Badge>
-            </Text> */}
-            {/* {manager.reportingTime && (
-              <Text>
-                <b>Reporting Time:</b> {manager.reportingTime}
-              </Text>
-            )} */}
           </Box>
         )}
       </VStack>
