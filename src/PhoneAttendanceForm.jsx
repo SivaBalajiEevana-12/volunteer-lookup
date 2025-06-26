@@ -33,7 +33,7 @@ const PhoneAttendanceForm = () => {
       if (res.ok) {
         setVolunteer(data);
       } else {
-        setFeedback("❌ Volunteer not found. Please register here: https://yourdomain.com/register");
+        setFeedback("❌ Volunteer not found. Please register here: https://docs.google.com/forms/d/e/1FAIpQLSctVxZvISXKwUHmM3-VpYSykCDVlDW6B5AueJIg3u8vdvyxWQ/viewform");
       }
     } catch (error) {
       setFeedback("❌ Server error. Please try again.");

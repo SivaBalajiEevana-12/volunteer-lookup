@@ -89,7 +89,7 @@ const VolunteerLookup = () => {
         {manager && (
           <Box borderWidth={1} borderRadius="xl" p={4} shadow="md" bg="gray.50">
             <Heading size="sm" color="gray.700" mb={2}>
-              Assigned Manager
+             Your Service Coordinator
             </Heading>
             <Text>
               <b>Name:</b>{" "}
