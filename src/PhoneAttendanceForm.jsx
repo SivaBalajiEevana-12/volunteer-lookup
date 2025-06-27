@@ -33,7 +33,7 @@ const PhoneAttendanceForm = () => {
       if (res.ok) {
         setVolunteer(data);
       } else {
-        setFeedback("❌ Volunteer not found. Please register here: https://docs.google.com/forms/d/e/1FAIpQLSctVxZvISXKwUHmM3-VpYSykCDVlDW6B5AueJIg3u8vdvyxWQ/viewform");
+        setFeedback("❌ Volunteer not found. Please register here: https://volunteer-registeration.vercel.app");
       }
     } catch (error) {
       setFeedback("❌ Server error. Please try again.");
@@ -78,7 +78,11 @@ const PhoneAttendanceForm = () => {
         {isRegister ? (
           <>
             ❌ Volunteer not found. Please{" "}
-            <Link href="" color="teal.500" isExternal>
+            <Link
+              href="https://volunteer-registeration.vercel.app"
+              color="teal.500"
+              isExternal
+            >
               register here
             </Link>
             .
@@ -93,7 +97,7 @@ const PhoneAttendanceForm = () => {
   return (
     <Box maxW="md" mx="auto" mt={10} p={5} borderWidth={1} borderRadius="lg">
       <VStack spacing={4}>
-         <Heading size="md">Volunteer Attendance Form</Heading> 
+        <Heading size="md">Volunteer Attendance Form</Heading>
         <Input
           placeholder="Enter WhatsApp Number"
           value={phone}
