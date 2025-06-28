@@ -29,7 +29,7 @@ const VolunteerLookup = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`https://vrc-server-production.up.railway.app/user/${phone}`);
+      const res = await fetch(`https://vrc-server-110406681774.asia-south1.run.app/user/${phone}`);
       const data = await res.json();
       if (res.ok) {
         setVolunteer(data.user);
