@@ -27,7 +27,7 @@ const PhoneAttendenceFlc = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`https://vrc-server-110406681774.asia-south1.run.app/july/flcattendence/${phone}`);
+      const res = await fetch(`https://vrc-server-110406681774.asia-south1.run.app/flcattendence/${phone}`);
       const data = await res.json();
       if (res.ok) {
         setUser(data);
@@ -44,7 +44,7 @@ const PhoneAttendenceFlc = () => {
     if (!user?._id) return;
 
     try {
-      const res = await fetch("https://vrc-server-110406681774.asia-south1.run.app/july/manual-flc-attendance", {
+      const res = await fetch("https://vrc-server-110406681774.asia-south1.run.app/manual-flc-attendance", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
