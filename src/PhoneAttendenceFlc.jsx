@@ -110,7 +110,7 @@ const PhoneAttendenceFlc = () => {
         {user && (
           <Box w="full" textAlign="left" mt={4}>
             <Text><b>Name:</b> {user.name}</Text>
-            <Text><b>Phone:</b> {user.phone}</Text>
+            <Text><b>Phone:</b> {user.whatsappNumber}</Text>
             <Select mt={4} value={status} onChange={(e) => setStatus(e.target.value)}>
               <option value="Present">Present</option>
               <option value="Absent">Absent</option>
